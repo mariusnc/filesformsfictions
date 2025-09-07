@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Files, Forms, Fictions International Symposium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff; /* page background switched to white */
+      --fg: #000000; /* text black for readability */
+      --muted: #4b5563;
+      --panel: #f3f4f6; /* light grey panels instead of dark */
+      --accent: #374151;
+      --maxw: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .banner {
+      position: relative;
+      min-height: 56vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 8vh 1.25rem;
+      background-image: url("banner.jpg");
+      background-size: cover;
+      background-position: center;
+      isolation: isolate;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.45));
+      z-index: -1;
+    }
+
+    .title {
+      margin: 0;
+      letter-spacing: .02em;
+      display: grid;
+      gap: .25rem;
+      color: #ffffff;
+    }
+    .title span { display: block; }
+    .title .row1 { font-weight: 300; font-size: clamp(1.2rem, 2.2vw + .6rem, 1.75rem); color: #e5e7eb; }
+    .title .row2 { font-weight: 700; font-size: clamp(2rem, 5vw + .2rem, 3.25rem); line-height: 1.1; }
+    .title .row3 { font-weight: 500; font-size: clamp(1rem, 1.6vw + .6rem, 1.25rem); color: #e5e7eb; }
+
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+    .columns {
+      margin: -3.25rem auto 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      background: var(--panel);
+      color: var(--fg);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 24px rgba(0,0,0,.15);
+      display: grid;
+      align-content: start;
+      min-height: 100%;
+    }
+
+    .card h3 {
+      margin: 0 0 .5rem;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.25;
+      text-align: left;
+    }
+
+    .card p {
+      margin: 0.25rem 0 0;
+      color: var(--accent);
+      text-align: left;
+    }
+
+    .spacer { height: 1px; margin: 2.5rem 0; opacity: .15; background: var(--accent); }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+      padding: 2rem 1rem 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <h1 class="title" aria-label="Three-line page title">
+      <span class="row2">Files, Forms, Fictions:</span>
+      <span class="row2">Literary Lives of Bureaucracy, </span>
+      <span class="row2">from Ledgers to Algorithms</span>
+      <br> <p></p>
+      <span class="row3">16-17 October 2025 </span>
+      <span class="row3">Bonn</span>
+    </h1>
+  </header>
+
+  <main class="container columns" role="main">
+    <section class="grid" aria-label="Three stacked boxes of text">
+      <article class="card">
+        <h3></h3>
+        <p>
+          This international symposium brings together scholars exploring the intersection of bureaucracy and literature across various cultural and historical contexts. The main goal is to open a space for the circulation and exchange of ideas on the literary uses of bureaucratic forms and themes, as well as to sketch synchronic and diachronic comparisons. </p>
+          
+          
+          <p></p>
+           <p></p>
+            <p></p>
+             <p></p>
+              <p></p>
+<p>
+Fostering a productive dialogue between researchers at various stages of their careers, with expertise in a variety of national literatures, specific themes, or individual authors, the event doubles as an opportunity to develop or consolidate frameworks for understanding literature’s complex relationship with bureaucratic power, documentation practices, and institutional acts, forms or tools of writing. At the heart of our exploration lies, therefore, the complex interplay between bureaucratic machinery and aesthetic imagination. We invite participants to illustrate their own approaches to how bureaucratic structures, languages, and logics have shaped fictional tropes (visual, textual, affective) while also considering how literature and the arts critique, reimagine, or reproduce administrative systems.
+
+</p>
+ <p></p>
+  <p></p>
+   <p></p>
+    <p></p>
+     <p></p>
+
+
+<p>
+
+Of particular interest is the study of evolving bureaucratic structures and processes—with their intricate webs of political authority, computational technologies, symbolic markers, embodied experiences, and affective dimensions—which leave unmistakable imprints on contemporary aesthetic forms. We are currently witnessing a moment in which AI, platform capitalism, and data-driven systems reshape both bureaucratic structures and their cultural representations. As the early 21st century continues to accelerate the transition from paper-based recordkeeping to digital governance, we deem it important to look back at the fictional instantiations of 19th- and 20th-century models of administration for a better grasp of emergent forms of bureaucratic imagery and imagination.
+        </p>
+      </article>
+      
+     
+
+      
+    </section>
+
+    <div class="spacer" aria-hidden="true"></div>
+  </main>
+
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
