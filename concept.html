@@ -7,6 +7,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Load Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
   <style>
     :root {
       --bg: #ffffff; /* page background switched to white */
@@ -28,6 +41,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      padding-top: 6rem; /* Add padding to prevent content from being hidden behind the fixed nav bar */
     }
 
     .banner {
@@ -110,9 +124,55 @@
       font-size: .9rem;
       padding: 2rem 1rem 3rem;
     }
+    
+    /* Styles for the new navigation bar from index.html */
+    .hoverable {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      transition: transform 0.3s ease-in-out;
+      color: #443450;
+      font-size: 2em;
+    }
+
+    .hoverable:before {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+      top: 100%;
+      left: 5%;
+      height: 10px;
+      width: 90%;
+      opacity: 0;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .hoverable:hover, .hoverable:active, .hoverable:focus {
+      transform: translateY(-5px);
+    }
+
+    .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
   </style>
 </head>
 <body>
+
+  <!-- The navigation bar from index.html -->
+  <nav class="fixed top-0 left-0 right-0 bg-white p-4 shadow-lg z-50 rounded-lg">
+    <div class="container mx-auto flex justify-center">
+      <ul class="flex space-x-12">
+        <li><a id="len1" class="hoverable" href="concept">Concept</a></li>
+        <li><a id="len2" class="hoverable" href="program">Program</a></li>
+        <li><a id="len3" class="hoverable" href="anstractsandbios">Abstracts & Bios</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Existing content of concept.html -->
   <header class="banner">
     <h1 class="title" aria-label="Three-line page title">
       <span class="row2">Files, Forms, Fictions:</span>
@@ -130,8 +190,6 @@
         <h3></h3>
         <p>
           This international symposium brings together scholars exploring the intersection of bureaucracy and literature across various cultural and historical contexts. The main goal is to open a space for the circulation and exchange of ideas on the literary uses of bureaucratic forms and themes, as well as to sketch synchronic and diachronic comparisons. </p>
-          
-          
           <p></p>
            <p></p>
             <p></p>
@@ -139,7 +197,6 @@
               <p></p>
 <p>
 Fostering a productive dialogue between researchers at various stages of their careers, with expertise in a variety of national literatures, specific themes, or individual authors, the event doubles as an opportunity to develop or consolidate frameworks for understanding literature’s complex relationship with bureaucratic power, documentation practices, and institutional acts, forms or tools of writing. At the heart of our exploration lies, therefore, the complex interplay between bureaucratic machinery and aesthetic imagination. We invite participants to illustrate their own approaches to how bureaucratic structures, languages, and logics have shaped fictional tropes (visual, textual, affective) while also considering how literature and the arts critique, reimagine, or reproduce administrative systems.
-
 </p>
  <p></p>
   <p></p>
@@ -147,25 +204,13 @@ Fostering a productive dialogue between researchers at various stages of their c
     <p></p>
      <p></p>
 
-
 <p>
-
 Of particular interest is the study of evolving bureaucratic structures and processes—with their intricate webs of political authority, computational technologies, symbolic markers, embodied experiences, and affective dimensions—which leave unmistakable imprints on contemporary aesthetic forms. We are currently witnessing a moment in which AI, platform capitalism, and data-driven systems reshape both bureaucratic structures and their cultural representations. As the early 21st century continues to accelerate the transition from paper-based recordkeeping to digital governance, we deem it important to look back at the fictional instantiations of 19th- and 20th-century models of administration for a better grasp of emergent forms of bureaucratic imagery and imagination.
         </p>
       </article>
-      
-     
-
-      
     </section>
 
     <div class="spacer" aria-hidden="true"></div>
   </main>
-
-
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
